@@ -1,22 +1,21 @@
 package src.main.java.homework6.Work3;
 
+import lombok.Setter;
+
+@Setter
 public class Greeter {
-    private String formality;
+    private Greeting greeting;
 
     public Greeter() {
-        this.formality = "default";
+        this.greeting = new GreetingDefault();
+    }
+
+    public Greeter(Greeting greeting) {
+        this.greeting = greeting;
     }
 
     public String greet() {
-        return switch (this.formality) {
-            case "formal" -> "Good evening, sir.";
-            case "casual" -> "Sup bro?";
-            case "intimate" -> "Hello Darling!";
-            default -> "Hello.";
-        };
+        return greeting.greet();
     }
 
-    public void setFormality(String formality) {
-        this.formality = formality;
-    }
 }
