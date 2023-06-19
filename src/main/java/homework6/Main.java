@@ -1,6 +1,7 @@
 package src.main.java.homework6;
 
 import src.main.java.homework6.Work3.Greeter;
+import src.main.java.homework6.Work3.GreetingCasual;
 import src.main.java.homework6.work1.Rectangle;
 import src.main.java.homework6.work1.Square;
 
@@ -21,7 +22,7 @@ public class Main {
         // III.work3
         Greeter greeter = new Greeter();
         System.out.println(greeter.greet());
-        greeter.setFormality("casual");
+        greeter.setGreeting(new GreetingCasual());
         System.out.println(greeter.greet());
 
     }
